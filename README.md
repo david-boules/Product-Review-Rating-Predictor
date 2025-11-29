@@ -1,6 +1,7 @@
 # Product Review Rating Predictor
 
-This project predicts a **1–5 star rating** from a raw product review text (using the ChatGPT Google Play Store Reviews dataset).
+This project predicts a **1–5 star rating** from a raw product review text (using the ChatGPT Google Play Store Reviews dataset, link to dataset: https://www.kaggle.com/datasets/bhavikjikadara/chatgpt-user-feedback).
+
 
 It uses:
 - **TF–IDF text features**
@@ -14,7 +15,7 @@ This work completes **Phase V** of the “CSCE 3602 - Fundamentals of Machine Le
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
@@ -44,7 +45,7 @@ This work completes **Phase V** of the “CSCE 3602 - Fundamentals of Machine Le
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 It is recommended to create a virtual environment:
 
@@ -79,7 +80,7 @@ Minimal dependency list:
 
 ---
 
-## 🚀 Running the Backend (Model Service)
+## Running the Backend (Model Service)
 
 From the project root, run FastAPI:
 
@@ -103,7 +104,7 @@ This starts the model service at:
 
 ---
 
-## 🖥️ Running the Frontend (Utility Application)
+## Running the Frontend (Utility Application)
 
 Run the Streamlit app **in a second terminal** from the project root:
 
@@ -128,7 +129,7 @@ All feedback is saved to `data/feedback.csv`.
 
 ---
 
-## 🔁 Online Learning (Retraining with Feedback)
+## Online Learning (Retraining with Feedback)
 
 The model supports *online learning* by periodically retraining using user feedback.
 
@@ -157,7 +158,7 @@ uvicorn app.api:app --reload
 
 ---
 
-## 🏗️ Initial Model Training (Optional)
+## Initial Model Training (Optional)
 
 If you want to retrain the *initial* version of the model from scratch using only the original dataset:
 
@@ -173,7 +174,7 @@ This uses `cleaned_data.csv` and recreates the three artifacts:
 
 ---
 
-## 🧠 Model Pipeline Summary
+## Model Pipeline Summary
 
 **Input**  
 A single string containing a product review.
@@ -191,20 +192,15 @@ JSON containing the predicted score, e.g. `{ "predicted_score": 4 }`.
 
 ---
 
-## 📌 Notes
+## Notes
 
 - The system follows a **client–server architecture**: the Streamlit frontend communicates with the FastAPI backend via HTTP and does not depend directly on the model implementation.
 - All model artefacts are stored under `model_artifacts/` and can be regenerated from the training scripts.
 - Retraining can be scheduled (e.g., daily) to simulate a continuous online-learning loop.
-- The Streamlit frontend satisfies the **GUI bonus** requirement; the feedback and retraining scripts satisfy the **online learning bonus** requirement.
 
 ---
 
 ## Authors
 
-Beshoy Botros
-David Boules  
-
-Fundamentals of Machine Learning — Phase V Project
-American University in Cairo
-
+- Beshoy Botros
+- David Boules
