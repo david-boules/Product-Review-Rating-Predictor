@@ -192,7 +192,7 @@ JSON containing the predicted score, e.g. `{ "predicted_score": 4 }`.
 
 ---
 
-## 📌 Notes
+## Notes
 
 - The system follows a **client–server architecture**: the Streamlit frontend communicates with the FastAPI backend via HTTP and does not depend directly on the model implementation.
 - All model artefacts are stored under `model_artifacts/` and can be regenerated from the training scripts.
