@@ -203,8 +203,5 @@ JSON containing the predicted score, e.g. `{ "predicted_score": 4 }`.
 ## Authors
 
 - Beshoy Botros
-- David Boules  
-
-Fundamentals of Machine Learning — Phase V Project
-American University in Cairo
+- David Boules
 
